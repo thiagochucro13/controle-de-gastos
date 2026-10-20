@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+controle_gastos.db
+.venv/
+venv/
+.env
+prints/*.png
+prints/*.jpg
