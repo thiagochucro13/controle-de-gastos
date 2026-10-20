@@ -1,3 +1,4 @@
+import os
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import parse_qs
 from http.cookies import SimpleCookie
@@ -8,8 +9,8 @@ import hashlib
 import secrets
 import html
 
-HOST = "127.0.0.1"
-PORT = 8000
+HOST = "0.0.0.0"
+PORT = int(os.environ.get("PORT", 8000))
 db = BancoDeDados()
 service = ServicoFinanceiro(db)
 sessoes = {}
